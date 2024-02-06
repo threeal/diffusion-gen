@@ -3,24 +3,16 @@ requires = ["poetry-core >= 1.0.0"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.poetry]
-name = "my_fibonacci"
-version = "0.0.0"
-description = "A starter python module for generating a Fibonacci sequence."
-license = "Unlicense"
+name = "diffusion-gen"
+version = "0.1.0"
+description = "A minimalistic text-to-image generator that utilizes diffusion models."
+license = "MIT"
 authors = [
     "Alfi Maulana <alfi.maulana.f@gmail.com>",
 ]
 readme = "README.md"
-repository = "https://github.com/threeal/python-starter"
-keywords = ["python", "starter", "fibonacci"]
-classifiers = [
-  "Development Status :: 1 - Planning",
-  "Intended Audience :: Developers",
-  "License :: OSI Approved :: The Unlicense (Unlicense)",
-  "Operating System :: OS Independent",
-  "Programming Language :: Python :: 3 :: Only",
-  "Topic :: Software Development :: Libraries :: Python Modules"
-]
+homepage = "https://threeal.github.io/diffusion-gen/"
+repository = "https://github.com/threeal/diffusion-gen"
 packages = [
     { include = "my_fibonacci", from = "lib" }
 ]
