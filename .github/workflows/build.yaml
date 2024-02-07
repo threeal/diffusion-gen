@@ -38,32 +38,3 @@ jobs:
         uses: actions/upload-artifact@v4.3.1
         with:
           path: dist/*
-
-  generate-docs:
-    name: Generate Documentation
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4.1.1
-
-      - name: Setup Python
-        uses: actions/setup-python@v5.0.0
-        with:
-          python-version: 3.11
-
-      - name: Setup Poetry
-        uses: threeal/setup-poetry-action@v1.1.0
-
-      - name: Cache Dependencies
-        id: cache-deps
-        uses: actions/cache@v4.0.0
-        with:
-          path: .venv
-          key: poetry-${{ runner.os }}-${{ hashFiles('pyproject.toml') }}
-
-      - name: Install Dependencies
-        if: steps.cache-deps.outputs.cache-hit != 'true'
-        run: poetry install --with dev
-
-      - name: Generate Documentation
-        run: poetry run poe docs
