@@ -27,7 +27,7 @@ optional = true
 pytest = "^8.3.4"
 poethepoet = "^0.32.2"
 pytest-cov = "^6.0.0"
-ruff = "^0.9.4"
+ruff = "^0.9.6"
 
 [tool.poetry.scripts]
 my_fibonacci = "my_fibonacci.__main__:main"
